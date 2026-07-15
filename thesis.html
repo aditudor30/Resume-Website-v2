@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study of Tudor-Adrian Cristea's bachelor thesis: an end-to-end 3D multi-camera tracking system for smart warehouses.">
+  <meta name="theme-color" content="#f4f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07101d" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="3D Multi-Camera Tracking — Tudor-Adrian Cristea">
+  <meta property="og:description" content="An end-to-end Computer Vision system for detecting, tracking, locating, and associating objects across synchronized warehouse cameras.">
+  <meta property="og:type" content="article">
+  <title>3D Multi-Camera Tracking — Tudor-Adrian Cristea</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        const preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Tudor-Adrian Cristea, return to portfolio">
+        <span class="brand-mark" aria-hidden="true">TC</span>
+        <span class="brand-name">Tudor-Adrian Cristea</span>
+      </a>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-navigation>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a class="is-active" href="thesis.html" aria-current="page">Thesis</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cv" href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation" data-menu-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="case-hero section" id="top" aria-labelledby="case-title">
+      <div class="container">
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to portfolio</a>
+        <div class="case-hero-grid">
+          <div>
+            <p class="eyebrow">Bachelor thesis · Grade 9.9 / 10</p>
+            <h1 id="case-title">3D Multi-Camera Tracking for Smart Warehouses</h1>
+            <p class="case-lead">An end-to-end Computer Vision system that turns synchronized camera streams into consistent global identities and metric-space trajectories.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://github.com/aditudor30/3d-mtmc-thesis-project" target="_blank" rel="noopener noreferrer">View public repository <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="#results">See the results</a>
+            </div>
+          </div>
+          <dl class="case-meta">
+            <div><dt>Role</dt><dd>Research &amp; engineering</dd></div>
+            <div><dt>Primary field</dt><dd>Computer Vision / AI</dd></div>
+            <div><dt>System scope</dt><dd>Detection to global tracking</dd></div>
+            <div><dt>Delivery</dt><dd>Reproduction-oriented repo + demonstrator</dd></div>
+          </dl>
+        </div>
+
+        <nav class="case-subnav" aria-label="Thesis sections">
+          <a href="#overview" data-nav-link>Overview</a>
+          <a href="#architecture" data-nav-link>Architecture</a>
+          <a href="#results" data-nav-link>Results</a>
+          <a href="#demo" data-nav-link>Demo</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section case-overview" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">The difficult part is not seeing an object. It is preserving its identity.</h2>
+        </div>
+        <div class="story-grid">
+          <article>
+            <span class="story-label">Problem</span>
+            <h3>Fragmented observations</h3>
+            <p>Objects become occluded, change scale and perspective, leave one camera, and later appear in another. A frame-level detector alone cannot explain that continuity.</p>
+          </article>
+          <article>
+            <span class="story-label">Approach</span>
+            <h3>One measured pipeline</h3>
+            <p>The system combines detection, local tracking, calibrated geometry, tracklet construction, global association, pruning, and export instead of treating each component in isolation.</p>
+          </article>
+          <article>
+            <span class="story-label">Outcome</span>
+            <h3>A stronger complete system</h3>
+            <p>The final configuration improves detection, association, and localization metrics over the frozen baseline and packages the result as a documented reproduction repository.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture" aria-labelledby="architecture-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Architecture</p>
+            <h2 id="architecture-title">A chain of decisions, with evidence at every stage.</h2>
+          </div>
+          <p>Select a stage to understand its role in the final system. The full repository contains the frozen configurations and public command-line entry points.</p>
+        </div>
+
+        <div class="pipeline-explorer pipeline-large" data-pipeline>
+          <div class="pipeline-tabs" role="tablist" aria-label="Detailed thesis pipeline stages">
+            <button type="button" role="tab" aria-selected="true" aria-controls="case-pipeline-panel" id="case-stage-detect" data-stage data-title="Detection" data-copy="YOLO11m is fine-tuned on the target warehouse classes. The final detector improves recall and provides the observations used by every downstream stage.">01 Detection</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="case-pipeline-panel" id="case-stage-local" data-stage data-title="Local tracking" data-copy="Per-camera tracking associates detections over time and converts short-lived frame observations into local trajectories and tracklets.">02 Local tracking</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="case-pipeline-panel" id="case-stage-geometry" data-stage data-title="3D geometry" data-copy="Camera calibration, class priors, and 25F ground-contact estimation place observations into a shared coordinate space while retaining explicit fallbacks.">03 3D geometry</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="case-pipeline-panel" id="case-stage-global" data-stage data-title="Global association" data-copy="Temporal overlap, camera transitions, geometry, and appearance evidence are evaluated to connect local tracklets without collapsing distinct identities.">04 Global association</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="case-pipeline-panel" id="case-stage-prune" data-stage data-title="Pruning & export" data-copy="Class-aware quality rules remove weak trajectories, remap compact global IDs, validate output structure, and prepare the final submission format.">05 Prune & export</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="case-pipeline-panel" id="case-stage-demo" data-stage data-title="Demonstrator" data-copy="A synchronized multi-camera and Bird’s-Eye View interface makes global identities and metric trajectories inspectable instead of leaving results inside tables.">06 Demonstrator</button>
+          </div>
+          <div class="pipeline-panel" id="case-pipeline-panel" role="tabpanel" aria-live="polite" aria-labelledby="case-stage-detect">
+            <span class="panel-index" aria-hidden="true">01</span>
+            <div>
+              <h3 data-pipeline-title>Detection</h3>
+              <p data-pipeline-copy>YOLO11m is fine-tuned on the target warehouse classes. The final detector improves recall and provides the observations used by every downstream stage.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="architecture-figure">
+          <a href="assets/system-architecture.png" target="_blank" rel="noopener" aria-label="Open the thesis system architecture at full size">
+            <img src="assets/system-architecture.png" alt="System architecture for the 3D multi-camera tracking pipeline" width="4948" height="2523" loading="lazy" decoding="async">
+          </a>
+          <figcaption>Architecture of the focused thesis pipeline. Open the diagram to inspect it at full size.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Validated results</p>
+            <h2 id="results-title">The final system improves all four aggregate tracking metrics.</h2>
+          </div>
+          <p>Results are reported on the project validation split. The public repository contains aggregate, per-scene, per-class, and geometry-specific tables.</p>
+        </div>
+
+        <div class="metric-grid case-metrics" aria-label="Key thesis outcomes">
+          <article class="metric-card">
+            <span>Validation HOTA</span>
+            <strong>0.1305 → 0.1463</strong>
+            <small>+12.1% relative improvement</small>
+          </article>
+          <article class="metric-card">
+            <span>Match at 2 metres</span>
+            <strong>0.3918 → 0.7462</strong>
+            <small>raw pseudo-depth vs 25F</small>
+          </article>
+          <article class="metric-card">
+            <span>Fine-tuned detector</span>
+            <strong>0.530 / 0.382</strong>
+            <small>mAP50 / mAP50–95</small>
+          </article>
+        </div>
+
+        <div class="results-layout">
+          <div class="comparison-chart" role="img" aria-label="Comparison of V8 baseline and final pipeline for HOTA, DetA, AssA, and LocA on a shared scale from 0.00 to 0.40">
+            <div class="chart-legend"><span><i class="baseline-swatch"></i>V8 baseline</span><span><i class="final-swatch"></i>YOLO T1 + 25F + V8</span></div>
+            <div class="chart-row">
+              <span>HOTA</span>
+              <div class="bar-track"><i class="bar baseline-bar" style="--bar-size: 32.6%"></i><i class="bar final-bar" style="--bar-size: 36.6%"></i></div>
+              <strong>0.1463</strong>
+            </div>
+            <div class="chart-row">
+              <span>DetA</span>
+              <div class="bar-track"><i class="bar baseline-bar" style="--bar-size: 62.3%"></i><i class="bar final-bar" style="--bar-size: 66.2%"></i></div>
+              <strong>0.2648</strong>
+            </div>
+            <div class="chart-row">
+              <span>AssA</span>
+              <div class="bar-track"><i class="bar baseline-bar" style="--bar-size: 17.1%"></i><i class="bar final-bar" style="--bar-size: 20.2%"></i></div>
+              <strong>0.0808</strong>
+            </div>
+            <div class="chart-row">
+              <span>LocA</span>
+              <div class="bar-track"><i class="bar baseline-bar" style="--bar-size: 97.4%"></i><i class="bar final-bar" style="--bar-size: 97.8%"></i></div>
+              <strong>0.3914</strong>
+            </div>
+            <p class="chart-note">All bars share a 0.00–0.40 scale. Use the table for exact values.</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <caption>Aggregate validation comparison</caption>
+              <thead><tr><th scope="col">Variant</th><th scope="col">HOTA</th><th scope="col">DetA</th><th scope="col">AssA</th><th scope="col">LocA</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">V8 baseline</th><td>0.1305</td><td>0.2492</td><td>0.0683</td><td>0.3897</td></tr>
+                <tr class="highlight-row"><th scope="row">Final pipeline</th><td>0.1463</td><td>0.2648</td><td>0.0808</td><td>0.3914</td></tr>
+              </tbody>
+            </table>
+            <a class="text-link" href="https://github.com/aditudor30/3d-mtmc-thesis-project/blob/main/docs/results.md" target="_blank" rel="noopener noreferrer">Open detailed results <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="result-notes">
+          <article><span>Localization</span><strong>+35.4 percentage points</strong><p>Match@2m rises from 39.2% to 74.6% with the selected ground-contact approach.</p></article>
+          <article><span>Detector</span><strong>0.890 precision</strong><p>The all-class detector balances strong precision with the recall required by downstream tracking.</p></article>
+          <article><span>Honest trade-off</span><strong>FP increased</strong><p>The final pipeline recovers substantially more true positives, while also introducing more false positives—an explicit remaining optimization target.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Demonstrator</p>
+            <h2 id="demo-title">Inspect the same identity across cameras and in metric space.</h2>
+          </div>
+          <p>The preview is loaded only when requested so the page stays fast and motion never starts without user intent.</p>
+        </div>
+
+        <div class="demo-loader" data-demo-container>
+          <div class="demo-placeholder" data-demo-placeholder>
+            <div class="demo-symbol" aria-hidden="true"><span>▶</span></div>
+            <div>
+              <h3>Multi-camera + Bird’s-Eye View preview</h3>
+              <p>Loads the official animated demonstrator from the public thesis repository. You can stop the animation at any time.</p>
+            </div>
+          </div>
+          <div class="demo-controls">
+            <button class="button button-primary" type="button" data-load-demo data-demo-url="https://raw.githubusercontent.com/aditudor30/3d-mtmc-thesis-project/main/assets/video_demo.gif">Load animated demo</button>
+            <p role="status" aria-live="polite" data-demo-status></p>
+          </div>
+          <noscript><p><a href="https://github.com/aditudor30/3d-mtmc-thesis-project/raw/main/assets/video_demo.gif">Open the project demo</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section engineering-section" aria-labelledby="engineering-title">
+      <div class="container engineering-grid">
+        <div>
+          <p class="eyebrow">Engineering decisions</p>
+          <h2 id="engineering-title">The public result is deliberately smaller than the research history.</h2>
+        </div>
+        <div class="decision-list">
+          <article><span>01</span><div><h3>Freeze the final path</h3><p>The public repository keeps the canonical pipeline and supporting evaluation code while excluding exploratory versions.</p></div></article>
+          <article><span>02</span><div><h3>Separate code from private inputs</h3><p>Datasets, checkpoints, caches, and generated outputs remain outside version control and are documented as local dependencies.</p></div></article>
+          <article><span>03</span><div><h3>State limitations explicitly</h3><p>Diagnostic cuboids are not the critical output, and the coordinate-space BEV is not presented as a map-aligned reconstruction.</p></div></article>
+          <article><span>04</span><div><h3>Make results inspectable</h3><p>Commands, frozen configurations, detailed metrics, architecture, and the demonstrator connect claims to evidence.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-cta-section">
+      <div class="container contact-card case-cta">
+        <div>
+          <p class="eyebrow">Continue exploring</p>
+          <h2>Read the code, inspect the evidence, or start a conversation.</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="https://github.com/aditudor30/3d-mtmc-thesis-project" target="_blank" rel="noopener noreferrer">Open GitHub repository</a>
+          <a class="button button-outline-light" href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+          <a class="button button-outline-light" href="mailto:tudor.adrian.cristea@gmail.com">Contact me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year></span> Tudor-Adrian Cristea</p>
+      <div><a href="index.html">Portfolio</a><a href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">CV</a><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

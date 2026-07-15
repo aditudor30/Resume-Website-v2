@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Tudor-Adrian Cristea, a Computer Vision and AI Engineer and incoming Erasmus Mundus IPCVAI scholar building practical, end-to-end systems.">
+  <meta name="theme-color" content="#f4f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07101d" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Tudor-Adrian Cristea — Computer Vision & AI Engineer">
+  <meta property="og:description" content="Computer Vision, applied AI, and end-to-end engineering across software, infrastructure, and hardware.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <title>Tudor-Adrian Cristea — Computer Vision &amp; AI Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        const preferred = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Tudor-Adrian Cristea, back to top">
+        <span class="brand-mark" aria-hidden="true">TC</span>
+        <span class="brand-name">Tudor-Adrian Cristea</span>
+      </a>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-navigation>
+        <a href="#about" data-nav-link>About</a>
+        <a href="#projects" data-nav-link>Projects</a>
+        <a href="#experience" data-nav-link>Experience</a>
+        <a href="thesis.html">Thesis</a>
+        <a href="#contact" data-nav-link>Contact</a>
+        <a class="nav-cv" href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation" data-menu-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero personal-hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid personal-hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Computer Vision &amp; AI Engineer</p>
+          <h1 id="hero-title">Tudor-Adrian Cristea</h1>
+          <p class="hero-role">Building practical AI systems with a broad engineering perspective.</p>
+          <p class="hero-lead">
+            I am an engineering graduate and incoming Erasmus Mundus IPCVAI scholar on a full scholarship. Computer Vision is my core specialization, supported by hands-on experience in machine learning, hardware, DevOps, and web development.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View selected work <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-links" aria-label="Social profiles">
+            <a href="https://github.com/aditudor30" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/tudor-adrian-cristea-2674932b8/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="mailto:tudor.adrian.cristea@gmail.com">Email <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="Profile highlights">
+          <div class="profile-card-portrait">
+            <img src="assets/profile.jpg" width="304" height="327" alt="Portrait of Tudor-Adrian Cristea">
+            <span>Based in Europe</span>
+          </div>
+          <div class="profile-card-copy">
+            <p class="profile-status"><i aria-hidden="true"></i> Current direction</p>
+            <strong>Computer Vision, image processing, and reliable AI systems.</strong>
+          </div>
+          <dl class="profile-facts">
+            <div><dt>Current</dt><dd>Incoming IPCVAI scholar</dd></div>
+            <div><dt>Degree</dt><dd>Electronics engineer</dd></div>
+            <div><dt>Strength</dt><dd>End-to-end thinking</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A focused specialist with a broad engineering foundation.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I enjoy the point where research becomes a working system. Computer Vision and AI are the fields in which I am building depth, while my experience across hardware, DevOps, web development, and machine learning helps me understand the complete path from sensor and data to interface and deployment.</p>
+          <p>Competitive swimming shaped the patience and consistency I bring to difficult technical work: define the next measurable step, learn from the result, and keep improving.</p>
+          <div class="about-principle">
+            <span>How I work</span>
+            <strong>Understand deeply. Measure honestly. Build clearly.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Selected projects</p>
+            <h2 id="projects-title">Applied work across AI and engineering.</h2>
+          </div>
+          <p>Projects that show how I approach perception, product integration, infrastructure, and complete engineering systems.</p>
+        </div>
+
+        <article class="featured-project-card">
+          <div class="featured-project-copy">
+            <div class="project-card-top">
+              <span class="project-type">Featured · Bachelor thesis · 9.9/10</span>
+              <span class="project-number">01</span>
+            </div>
+            <h3>3D Multi-Camera Tracking for Smart Warehouses</h3>
+            <p>An end-to-end perception system that detects and tracks people and warehouse vehicles across synchronized cameras, reasons about their 3D position, and associates identities globally.</p>
+            <div class="project-tags" aria-label="Technologies"><span>Computer Vision</span><span>Multi-object tracking</span><span>3D geometry</span><span>PyTorch</span></div>
+            <div class="project-actions">
+              <a class="button button-primary" href="thesis.html">Read the case study <span aria-hidden="true">→</span></a>
+              <a class="text-link" href="https://github.com/aditudor30/3d-mtmc-thesis-project" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <dl class="featured-project-meta">
+            <div><dt>Domain</dt><dd>Computer Vision / AI</dd></div>
+            <div><dt>Scope</dt><dd>Detection to global tracking</dd></div>
+            <div><dt>Contribution</dt><dd>Research, engineering, evaluation</dd></div>
+            <div><dt>Delivery</dt><dd>Focused repository + demonstrator</dd></div>
+          </dl>
+        </article>
+
+        <div class="project-grid supporting-project-grid">
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-type">Applied computer vision</span>
+              <span class="project-number">02</span>
+            </div>
+            <h3>Plant Doctor</h3>
+            <p>A web application that turns a trained plant-disease classifier into an accessible diagnostic workflow.</p>
+            <div class="project-tags" aria-label="Technologies"><span>PyTorch</span><span>Computer Vision</span><span>Streamlit</span></div>
+            <div class="project-links">
+              <a href="https://plant-doctor-by-adi.streamlit.app/" target="_blank" rel="noopener noreferrer">Live application <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/aditudor30/Plant-Doctor-Web" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-type">Assistive AI</span>
+              <span class="project-number">03</span>
+            </div>
+            <h3>BlindAid</h3>
+            <p>A computer-vision concept for helping visually impaired users understand nearby obstacles and navigate more safely.</p>
+            <div class="project-tags" aria-label="Technologies"><span>Depth estimation</span><span>Audio feedback</span><span>Deep learning</span></div>
+            <div class="project-links">
+              <a href="https://github.com/aditudor30/BlindAid" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-type">Delivery &amp; infrastructure</span>
+              <span class="project-number">04</span>
+            </div>
+            <h3>GitOps Delivery Pipeline</h3>
+            <p>An end-to-end CI/CD workflow for containerized web software, with automated deployment to Kubernetes through GitOps.</p>
+            <div class="project-tags" aria-label="Technologies"><span>GitHub Actions</span><span>Kubernetes</span><span>ArgoCD</span></div>
+            <div class="project-links">
+              <a href="https://github.com/aditudor30/gitops-repo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Experience &amp; education</p>
+          <h2 id="experience-title">The path behind my current focus.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item timeline-featured">
+            <div class="timeline-date">2026 — 2028</div>
+            <div class="timeline-content">
+              <span class="timeline-kicker">Incoming master's student · Full scholarship</span>
+              <h3>Erasmus Mundus IPCVAI Scholar</h3>
+              <p>Selected for the joint master's in Artificial Intelligence for Image Processing and Computer Vision, delivered across Budapest, Madrid, and Bordeaux.</p>
+              <a class="text-link" href="https://ipcv.eu/" target="_blank" rel="noopener noreferrer">About IPCVAI <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-content">
+              <span class="timeline-kicker">Engineering degree completed</span>
+              <h3>Electronics Engineering &amp; Computer Science</h3>
+              <p>Graduated as an engineer after completing a 9.9/10 bachelor thesis focused on 3D multi-camera tracking and visual AI engineering.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Industry</div>
+            <div class="timeline-content">
+              <span class="timeline-kicker">MetaMinds</span>
+              <h3>DevOps Engineer Intern</h3>
+              <p>Worked across delivery and infrastructure, automating the path from source code to a deployed web product.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Embedded</div>
+            <div class="timeline-content">
+              <span class="timeline-kicker">NXP-powered project</span>
+              <h3>Automotive Systems Engineering</h3>
+              <p>Implemented braking, lighting, transmission, and steering functionality on the S32K144 microcontroller.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Capabilities</p>
+            <h2 id="capabilities-title">Specialized in visual AI. Adaptable across the stack.</h2>
+          </div>
+          <p>I go deep where the problem requires it, while keeping enough breadth to connect models with data, software, infrastructure, and physical systems.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card capability-primary">
+            <span class="capability-number">01</span>
+            <h3>Computer Vision &amp; AI</h3>
+            <p>Object detection, multi-object tracking, ReID, 3D geometry, deep learning, model evaluation, and failure analysis.</p>
+            <div class="capability-tools">Python · PyTorch · OpenCV · YOLO</div>
+          </article>
+          <article class="capability-card">
+            <span class="capability-number">02</span>
+            <h3>ML &amp; Software Engineering</h3>
+            <p>Reproducible pipelines, data processing, experiment design, APIs, demonstrators, and maintainable Python systems.</p>
+            <div class="capability-tools">NumPy · FastAPI · Gradio · SQL</div>
+          </article>
+          <article class="capability-card">
+            <span class="capability-number">03</span>
+            <h3>DevOps &amp; Cloud</h3>
+            <p>Automated delivery, containers, orchestration, GitOps, and deployment workflows that turn code into reliable services.</p>
+            <div class="capability-tools">Docker · Kubernetes · ArgoCD · GitHub Actions</div>
+          </article>
+          <article class="capability-card">
+            <span class="capability-number">04</span>
+            <h3>Web &amp; Embedded Systems</h3>
+            <p>Interfaces for technical products, model integration, and low-level engineering experience with automotive hardware.</p>
+            <div class="capability-tools">JavaScript · React · HTML/CSS · Embedded C</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s build something that can be tested, trusted, and used.</h2>
+          <p>I am open to conversations around Computer Vision, AI engineering, research, and technically ambitious software.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:tudor.adrian.cristea@gmail.com">Send an email</a>
+          <a class="button button-outline-light" href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+          <button class="button button-outline-light" type="button" data-copy-email data-email="tudor.adrian.cristea@gmail.com">Copy email</button>
+          <p class="copy-status" role="status" aria-live="polite" data-copy-status></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year></span> Tudor-Adrian Cristea</p>
+      <div>
+        <a href="thesis.html">Thesis</a>
+        <a href="assets/CV_Tudor-Adrian_Cristea.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="https://github.com/aditudor30" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tudor-adrian-cristea-2674932b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TC monogram">
+  <rect width="64" height="64" rx="16" fill="#315fea"/>
+  <path d="M14 18h36v8H36v24h-8V26H14z" fill="#fff"/>
+  <path d="M48 42a12 12 0 1 1 0-20v8a4 4 0 1 0 0 4z" fill="#9fb3ff"/>
+</svg>
